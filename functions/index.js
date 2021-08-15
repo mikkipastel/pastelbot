@@ -1,9 +1,9 @@
 const functions = require("firebase-functions");
 const region = "asia-northeast1";
 
-const thailandpost = require("./thailandpost");
-const lineApp = require("./lineapp");
-const msgTemplate = require("./msgTemplate");
+const thailandpost = require("./thailandpost/thailandpost");
+const lineApp = require("./thailandpost/lineapp");
+const msgTemplate = require("./thailandpost/msgTemplate");
 
 exports.linebot = functions.region(region).https.onRequest(async(request, response) => {
     const event = request.body.events[0];
